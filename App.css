@@ -1,0 +1,144 @@
+
+.note_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 4px;
+}
+
+.note textarea {
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  color: #000000;
+  resize: none;
+  font-size: 18px;
+}
+
+.note textarea:focus {
+  outline: none;
+}
+
+.note textarea::placeholder {
+  color: #000000;
+  opacity: 0.4;
+}
+
+
+
+.note_save:hover {
+  background: #fff;
+  border: 1.5px solid #fff;
+  color: #4b1589;
+}
+
+
+.main {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 15px;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.title {
+  color: #000000;
+  font-size: 38px;
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.notes {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+.dark {
+  .form-check-input{
+    padding-top: 5px;
+    border: 2px solid white;
+  }
+  .note{
+    background-color: rgb(85, 84, 84);
+}
+  .title{
+    color: aliceblue;
+    border: 2px solid white;
+    background-color: #323232;
+  }
+  .note_save {
+    background-color: rgb(221, 255, 0);
+    transition: 0.1s ease-in-out;
+    border: 1.5px solid #000ba2;
+    border-radius: 10px;
+    color: #3a3a3a;
+    padding: 4px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.note-body{
+  color: white;
+}
+.note_head{
+  color: whitesmoke;
+}
+hr{
+  color: white;
+}
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+.light {
+  .note{
+    background-color: rgb(89, 203, 44);
+}
+.form-check-input{
+  padding-top: 5px;
+  border: 2px solid black;
+}
+  .title{
+    color: rgb(0, 0, 0);
+    background-color: #6cff62;
+    border: 2px solid black;
+  }
+  .note_save {
+    background: transparent;
+    transition: 0.1s ease-in-out;
+    border: 1.5px solid #0d00ff;
+    border-radius: 10px;
+    color: #000000;
+    padding: 4px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+hr{
+  color: black;
+  height: 10px;
+}
+  background-color: rgb(185, 254, 160);
+}
+
+@media screen and (max-width: 900px) {
+  .notes {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .notes {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+}
